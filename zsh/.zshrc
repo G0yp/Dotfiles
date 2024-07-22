@@ -49,4 +49,6 @@ ls() {
 export STARSHIP_CONFIG=~/Dotfiles/zsh/.config/starship.toml
 
 eval "$(zoxide init zsh)"
+eval "$(thefuck --alias)"
 eval "$(starship init zsh)"
+
