@@ -1,5 +1,3 @@
-# Created by newuser for 5.9
-# Created by Zap installer
 [ -f "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh" ] && source "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh"
 plug "zsh-users/zsh-autosuggestions"
 plug "zap-zsh/supercharge"
@@ -45,6 +43,11 @@ ls() {
     command eza "$@"
   fi
 }
+
+
+alias beavis='cowsay -f beavis.zen'
+alias pacnews='pacnews | cat'
+alias lsd='lolcat'
 
 export STARSHIP_CONFIG=~/Dotfiles/zsh/.config/starship.toml
 
