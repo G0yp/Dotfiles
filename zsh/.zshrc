@@ -48,6 +48,7 @@ ls() {
 alias beavis='cowsay -f beavis.zen'
 alias pacnews='pacnews | cat'
 alias lsd='lolcat'
+alias shut='shutdown now'
 
 export STARSHIP_CONFIG=~/Dotfiles/zsh/.config/starship.toml
 
