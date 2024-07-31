@@ -1,0 +1,55 @@
+* {
+    background-color: #2D333F;
+    border-color: White;
+    text-color: White;
+    font: "Times New Roman 10";
+    border-radius: 4%;
+}
+
+window {
+    anchor: south;
+    location: south;
+    width: 100%;
+    padding: 4px;
+    children: [horibox];
+}
+
+horibox {
+    orientation: horizontal;
+    children: [ prompt, entry, listview];
+}
+
+prompt {
+    color: black;
+    border-radius: 4%;
+    background-color: #b3d6e2;
+    padding: 0px 5px;
+}
+
+listview {
+    layout: horizontal;
+    spacing: 5px;
+    lines: 100;
+}
+
+entry {
+    expand: false;
+    width: 10em;
+    padding: 0px 0px 0px 5px;
+
+    font: "Times New Roman 10";
+}
+
+element {
+    padding: 0px 2px;
+}
+
+element selected {
+    background-color: SteelBlue;
+}
+
+element-text,
+element-icon {
+    background-color: inherit;
+    text-color: inherit;
+}
