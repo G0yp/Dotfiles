@@ -1,5 +1,5 @@
 * {
-    background-color: #2D333F;
+    background-color: #2D3644;
     border-color: White;
     text-color: White;
     font: "Times New Roman 10";
@@ -20,10 +20,10 @@ horibox {
 }
 
 prompt {
-    color: black;
+    color: white;
     border-radius: 4%;
-    background-color: #b3d6e2;
-    padding: 0px 5px;
+    background-color: #88A1BF;
+    padding: 0px 9px;
 }
 
 listview {
@@ -41,11 +41,11 @@ entry {
 }
 
 element {
-    padding: 0px 2px;
+    padding: 0px 5px;
 }
 
 element selected {
-    background-color: SteelBlue;
+    background-color: #5A6C87;
 }
 
 element-text,
