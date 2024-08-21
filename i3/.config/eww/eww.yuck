@@ -1,0 +1,13 @@
+(defwindow hi
+  :monitor 0 ;; Optional for X11
+  :stacking "fg"
+  :windowtype "normal"
+  :wm-ignore true
+  :geometry (geometry
+              :width "50%"
+              :height "100%")
+  (hey))
+
+  (defwidget hey[]
+    label :text "Hi there"
+  )
