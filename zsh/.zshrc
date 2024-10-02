@@ -14,6 +14,7 @@ HISTFILE=$HOME/.zhistory
 SAVEHIST=1000
 HISTSIZE=999
 setopt HIST_EXPIRE_DUPS_FIRST
+setopt EXTENDED_HISTORY
 
 # autocompletion using arrow keys (based on history)
 bindkey '\e[A' history-search-backward
@@ -50,7 +51,12 @@ alias pacnews='pacnews | cat'
 alias lsd='lolcat'
 alias shut='shutdown now'
 
+# export
 export STARSHIP_CONFIG=~/Dotfiles/zsh/.config/starship.toml
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+export TERMINAL=/usr/bin/alacritty
+export PATH="/home/goup/.cargo/bin:$PATH"
 
 eval "$(zoxide init zsh)"
 eval "$(thefuck --alias)"
@@ -61,6 +67,9 @@ eval "$(starship init zsh)"
 [ -s "/home/goup/.bun/_bun" ] && source "/home/goup/.bun/_bun"
 
 # bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
-export TERMINAL=/usr/bin/alacritty
+
+## [Completion]
+## Completion scripts setup. Remove the following line to uninstall
+[[ -f /home/goup/.dart-cli-completion/zsh-config.zsh ]] && . /home/goup/.dart-cli-completion/zsh-config.zsh || true
+## [/Completion]
+
