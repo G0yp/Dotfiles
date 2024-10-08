@@ -23,7 +23,7 @@ def clock(monitor):
                 status_icons(),
                 Widget.Label(
                     label=Utils.Poll(
-                        1000, lambda x: datetime.datetime.now().strftime("%H:%M")
+                        1000, lambda x: datetime.datetime.now().strftime("%I:%M")
                     ).bind("output"),
                 ),
             ]
