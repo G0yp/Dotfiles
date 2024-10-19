@@ -6,9 +6,9 @@ from .dark_mode import dark_mode_button
 from .ethernet import ethernet_control
 from .qs_button import QSButton
 from ignis.services.network import NetworkService
-#from .bluetooth import bluetooth_control
 
 network = NetworkService.get_default()
+
 
 
 def add_button(main_box: Widget.Box, buttons: tuple[QSButton, ...], i: int) -> None:
@@ -17,9 +17,9 @@ def add_button(main_box: Widget.Box, buttons: tuple[QSButton, ...], i: int) -> N
         row.style = "margin-top: 0.5rem;"
 
     main_box.append(row)
-
     button1 = buttons[i]
     row.append(button1)
+
 
     if button1.content:
         main_box.append(button1.content)
@@ -46,7 +46,6 @@ def qs_config(main_box: Widget.Box) -> None:
         dnd_button(),
         dark_mode_button(),
         record_control(),
-#        bluetooth_control(),
     )
 
 
@@ -59,5 +58,6 @@ def quick_settings() -> Widget.Box:
     main_box = Widget.Box(vertical=True, css_classes=["qs-main-box"])
     network.wifi.connect("notify::devices", lambda x, y: update_box(main_box))
     network.ethernet.connect("notify::devices", lambda x, y: update_box(main_box))
+#    scana()
 
     return main_box

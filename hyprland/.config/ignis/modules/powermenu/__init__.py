@@ -32,7 +32,7 @@ def reboot(*args) -> None:
 
 def suspend(*args) -> None:
     app.close_window("ignis_POWERMENU")
-    Utils.exec_sh_async("systemctl suspend && hyprlock")
+    Utils.exec_sh_async("systemctl suspend")
 
 
 def hypr_exit(*args) -> None:
