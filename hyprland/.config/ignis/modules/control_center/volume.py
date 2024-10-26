@@ -128,11 +128,8 @@ def volume_control():
         _type="microphone",
     )
 
-
-
     speaker_icon = volume_icon(audio.speaker)
     microphone_icon = volume_icon(audio.microphone)
-#    brightness_icon = volume_icon()
 
     speaker_scale = volume_scale(audio.speaker)
     microphone_scale = volume_scale(audio.microphone)
@@ -157,14 +154,6 @@ def volume_control():
         ],
         style="margin-top: 0.25rem;",
     )
-
-#    brightness_control = Widget.Box(
-#        vertical=True,
- #       child=[
- #           Widget.Box(child=[brightness_icon, brightness_scale]),
- #       ],
-  #      style="margin-top: 0.25rem;",
-  #  )
 
     return Widget.Box(
         vertical=True,

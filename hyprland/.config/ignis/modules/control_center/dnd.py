@@ -6,7 +6,7 @@ notifications = NotificationService.get_default()
 
 def dnd_button() -> QSButton:
     return QSButton(
-        label=notifications.bind("dnd", lambda value: "Silent" if value else "Do Not Disturb"),
+        label=notifications.bind("dnd", lambda value: "Silent" if value else "Noisy"),
         icon_name=notifications.bind(
             "dnd",
             transform=lambda value: "notification-disabled-symbolic"

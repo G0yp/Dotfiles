@@ -13,7 +13,9 @@ from modules.launcher import launcher  # noqa: E402
 
 Utils.exec_sh("gsettings set org.gnome.desktop.interface gtk-theme Material")
 Utils.exec_sh("gsettings set org.gnome.desktop.interface icon-theme Papirus")
-# Utils.exec_sh('gsettings set org.gnome.desktop.interface font-name "JetBrains Mono Regular 11"')
+Utils.exec_sh(
+    'gsettings set org.gnome.desktop.interface font-name "JetBrains Mono Regular 11"'
+)
 Utils.exec_sh("hyprctl reload")
 app = IgnisApp.get_default()
 app.apply_css(Utils.get_current_dir() + "/style.scss")

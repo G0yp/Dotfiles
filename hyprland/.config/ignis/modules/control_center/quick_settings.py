@@ -10,16 +10,15 @@ from ignis.services.network import NetworkService
 network = NetworkService.get_default()
 
 
-
 def add_button(main_box: Widget.Box, buttons: tuple[QSButton, ...], i: int) -> None:
     row = Widget.Box(homogeneous=True)
     if len(main_box.child) > 0:
         row.style = "margin-top: 0.5rem;"
 
     main_box.append(row)
+
     button1 = buttons[i]
     row.append(button1)
-
 
     if button1.content:
         main_box.append(button1.content)
@@ -58,6 +57,5 @@ def quick_settings() -> Widget.Box:
     main_box = Widget.Box(vertical=True, css_classes=["qs-main-box"])
     network.wifi.connect("notify::devices", lambda x, y: update_box(main_box))
     network.ethernet.connect("notify::devices", lambda x, y: update_box(main_box))
-#    scana()
 
     return main_box
