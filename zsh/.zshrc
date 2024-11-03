@@ -31,6 +31,11 @@ alias cd="z"
 alias cat='bat'
 alias zed='zeditor'
 
+# WinApps aliases
+alias winstart='docker compose --file ~/.config/winapps/compose.yaml start'
+alias winstop='docker compose --file ~/.config/winapps/compose.yaml stop'
+alias winstat='docker compose --file ~/.config/winapps/compose.yaml ps'
+
 # Remove the ls alias
 unalias ls
 
@@ -55,8 +60,10 @@ alias shut='shutdown now'
 export STARSHIP_CONFIG=~/Dotfiles/zsh/.config/starship.toml
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
-export TERMINAL=/usr/bin/alacritty
+export TERMINAL="/usr/bin/alacritty"
 export PATH="/home/goup/.cargo/bin:$PATH"
+export PATH="/usr/local/bin:$PATH"
+
 
 eval "$(zoxide init zsh)"
 eval "$(thefuck --alias)"
