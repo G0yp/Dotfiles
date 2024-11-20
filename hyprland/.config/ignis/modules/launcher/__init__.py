@@ -141,7 +141,7 @@ def launcher() -> Widget.Window:
             app_list.visible = False
             return
 
-        apps = applications.search(query)
+        apps = applications.search(applications.apps, query)
         if apps == []:
             app_list.child = [SearchWebButton(query)]
         else:
@@ -192,6 +192,7 @@ def launcher() -> Widget.Window:
         visible=False,
         popup=True,
         kb_mode="on_demand",
+        # exclusivity="ignore",
         css_classes=["unset"],
         setup=lambda self: self.connect(
             "notify::visible", lambda x, y: on_open(self, entry)

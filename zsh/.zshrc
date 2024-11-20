@@ -55,6 +55,7 @@ alias beavis='cowsay -f beavis.zen'
 alias pacnews='pacnews | cat'
 alias lsd='lolcat'
 alias shut='shutdown now'
+alias vim='nvim'
 
 # export
 export STARSHIP_CONFIG=~/Dotfiles/zsh/.config/starship.toml
@@ -63,6 +64,7 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 export TERMINAL="/usr/bin/alacritty"
 export PATH="/home/goup/.cargo/bin:$PATH"
 export PATH="/usr/local/bin:$PATH"
+export MANPAGER='nvim +Man!'
 
 
 eval "$(zoxide init zsh)"
