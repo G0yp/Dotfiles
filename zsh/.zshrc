@@ -55,7 +55,8 @@ alias beavis='cowsay -f beavis.zen'
 alias pacnews='pacnews | cat'
 alias lsd='lolcat'
 alias shut='shutdown now'
-alias vim='nvim'
+alias sus='systemctl suspend'
+# alias sshgoup ='ssh goup@192.168.2.20'
 
 # export
 export STARSHIP_CONFIG=~/Dotfiles/zsh/.config/starship.toml
@@ -81,4 +82,5 @@ eval "$(starship init zsh)"
 ## Completion scripts setup. Remove the following line to uninstall
 [[ -f /home/goup/.dart-cli-completion/zsh-config.zsh ]] && . /home/goup/.dart-cli-completion/zsh-config.zsh || true
 ## [/Completion]
+#
 
